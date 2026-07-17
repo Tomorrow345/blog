@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS中的随机数</title>
+    <link rel="icon" href="./tomorrow.ico">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="./tomorrow.ico" alt="Tomorrow" title="Tomorrow's Blog">
+        <span class="location">JS中的随机数</span>
+    </header>
+    <main class="mMain">
+        <div class="openmAtc">
+            <div class="openfuAtc">
+                <div class="openfuAtcLab">
+                    <h1>JS中的随机数</h1>
+                    <ul>
+                        <li>编程</li>
+                    </ul>
+                </div>
+                <span>
+当你在做猜数字、掷骰子等一类网页时，都需要用js生成随机数，我们可以通过Math.random来实现
+                    <div class="codeAera">
+                        <div class="caLab">
+                            <span>JS</span>
+                        </div>
+                        <pre>
+                            <code class="language-javascript">
+// 生成1-100的随机数
+let rollNum = Math.floor(Math.random() * (100 - 1 + 1)) + 1; 
+                            </code>
+                        </pre>
+                    </div>
+用let创建一个变量，Math.floor用来将数字转化为整数，如果没有结果可能会是：3.0451182108912738、6.923154507599182、3.5553578526501806……
+Math.random() * (最大值 - 最小值 + 最小值) + 最小值
+下面是关于本网站掷骰子的代码
+                    <div class="codeAera">
+                        <div class="caLab">
+                            <span>JS</span>
+                        </div>
+                        <pre>
+                            <code class="language-javascript">
+const rollBtn = document.getElementById('rollBtn'); 
+const points = document.getElementById('points'); 
+
+rollBtn.onclick = () => {
+    let rollNum = Math.floor(Math.random() * (6 - 1 + 1)) + 1; 
+    points.textContent = `点数：${rollNum.toString()}`; 
+}
+                            </code>
+                        </pre>
+                    </div>
+找到掷骰子的按钮和显示点数的文字，给按钮添加点击事件，创建一个随机数变量，并修改文字的内容
+                    <div class="imgs">
+                        
+                    </div>
+                </span>
+            </div>
+            <h4 class="opentime">2026/7/13</h4>
+            </div>
+        </div>        
+    </main>
+    <a id="home" href="./index.html">返回首页</a>
+    <footer>
+        <p>&copy; 2026, Tomorrow's blog</p>
+        <p>感谢DeepSeek、豆包、GitHub Copilot的传教</p>
+        <div id="contact">
+            <img class="Bzhan ptr" src="./Bilibili_tv_a.svg" onclick="window.open('https://space.bilibili.com/3632299675487007?spm_id_from=333.1007.0.0')" alt="B站主页" title="B站主页 | 点赞！关注！投币！">
+            <img class="githb ptr" src="./github.svg" onclick="window.open('https://github.com/Tomorrow345')" alt="GitHub主页" title="GitHub主页">
+            <img class="cde ptr" src="./code.svg" onclick="window.open('https://github.com/Tomorrow345/blog')" alt="在GitHub查看网站" title="在GitHub查看网站 | 给个Star！">
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll(); 
+    </script>
+</body>
+</html>

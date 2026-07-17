@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML字体</title>
+    <link rel="icon" href="./tomorrow.ico">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="./tomorrow.ico" alt="Tomorrow" title="Tomorrow's Blog">
+        <span class="location">HTML字体</span>
+    </header>
+    <main class="mMain">
+        <div class="openmAtc">
+            <div class="openfuAtc">
+                <div class="openfuAtcLab">
+                    <h1>HTML字体</h1>
+                    <ul>
+                        <li>编程</li>
+                    </ul>
+                </div>
+                <span>
+想让网页的文字看起来不那么生硬，可以在css中使用font-family修改字体，需要自己寻找好看的字体，自己电脑有的其它电脑可能没有，就会变成默认的，可以尽量寻找更兼容的字体，如果浏览网页的电脑是清朝下来的，什么字体都没有，就需要在后面加上sans-serif，sans-serif会让电脑寻找一个等线字体，每个系统都有自己的等线字体
+                    <div class="codeAera">
+                        <div class="caLab">
+                            <span>CSS</span>
+                        </div>
+                        <pre><code class="language-css">
+.item {
+    font-family: 'Microsoft YaHei', Arial, sans-serif
+}
+                        </code></pre>
+                    </div>
+以下是一些好看的字体
+JetBrains Mono	清晰、有连字（=> 变成 ⇒）、好看	写代码首选
+Fira Code	经典连字字体，很多程序员在用	写代码、编辑器
+Cascadia Code	微软出品，Windows Terminal 默认	VS Code、终端
+Consolas	Windows 自带，稳定不出错	任何场景，无需安装
+Monaco	Mac 自带，经典	Mac 用户常用
+Source Code Pro	Adobe 出品，免费开源	代码展示
+Menlo	Mac 默认等宽字体之一	Mac 用户
+幼圆 笔画很细 字形圆润
+Roboto 字体来源Google Fonts，需要写&lt;link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+宋体 好看无需多言
+Impact 大粗字母
+Ink Free 墨水手写体
+Press Start 2P 像素字体，游戏风 字体来源Google Fonts，需要写&lt;link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="styelsheet">
+Century Gothic 圆润字母，参见本博客页脚
+
+更多请参见同为我发布的另一个网页<a href="https://tomorrow345.github.io/htmlfontcp" target="_blank">HTML字体对比</a>
+                    <div class="imgs">
+                        
+                    </div>
+                </span>
+            </div>
+            <h4 class="opentime">2026/7/15</h4>
+            </div>
+        </div>        
+    </main>
+    <a id="home" href="./index.html">返回首页</a>
+    <footer>
+        <p>&copy; 2026, Tomorrow's blog</p>
+        <p>感谢DeepSeek、豆包、GitHub Copilot的传教</p>
+        <div id="contact">
+            <img class="Bzhan ptr" src="./Bilibili_tv_a.svg" onclick="window.open('https://space.bilibili.com/3632299675487007?spm_id_from=333.1007.0.0')" alt="B站主页" title="B站主页 | 点赞！关注！投币！">
+            <img class="githb ptr" src="./github.svg" onclick="window.open('https://github.com/Tomorrow345')" alt="GitHub主页" title="GitHub主页">
+            <img class="cde ptr" src="./code.svg" onclick="window.open('https://github.com/Tomorrow345/blog')" alt="在GitHub查看网站" title="在GitHub查看网站 | 给个Star！">
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll(); 
+    </script>
+</body>
+</html>

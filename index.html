@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="version" content="-">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomorrow 的 Blog</title>
+    <link rel="icon" href="./tomorrow.ico">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img class="logo" src="./tomorrow.ico" alt="Tomorrow" title="Tomorrow's Blog">
+        <nav class="navBar">
+            <a id="TomainAtc" tabindex="0">文章</a>
+            <a id="Toabout" tabindex="0">关于</a>
+            <a id="Tolately" tabindex="0">最近更新</a>
+            <a id="Tocontact" tabindex="0">联系</a>
+        </nav>
+        <span class="location">首页</span>
+    </header>
+    <div class="hero" id="hero">
+        <div class="hcBg">
+            <span>Welcome to Tomorrow's Blog!</span>
+        </div>
+    </div>
+    <div class="smBg">
+        <img src="./snowyMountain.png">
+    </div>
+    <div class="place">
+        <pre>
+            <h1>
+你好，
+我是Tomorrow
+            </h1>
+        </pre>
+        <h5>——希望就在明日——</h5>
+        <div class="downArrow" title="继续浏览" tabindex="0">
+            <img src="./arrow_down.svg">
+            <img src="./arrow_down.svg">
+        </div>
+    </div>
+    <main class="mMain">
+        <aside class="intro-func">
+            <h2 id="about">关于</h2>
+            <span>本人昵称日月日，12岁，上小学六年级，做视频做不火的</span>
+            <div class="hobby">
+                <h3>爱好</h3>
+                <ul>
+                    <li>编程</li>
+                    <li>听术力口</li>
+                    <li>打游戏</li>
+                    <li>画画</li>
+                    <li>Python</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>和平精英</li>
+                    <li>Minecraft</li>
+                    <li>蛋仔派对</li>
+                </ul>
+            </div>
+            <div class="webAbout">
+                <h3>网站介绍</h3>
+                <span>这是Tomorrow的博客网站，期望发展得能很好</span>
+            </div>
+        </aside>
+        <article class="mainAtc" id="mainAtc">
+            <div class="atcLab">
+                <h2>文章</h2>
+                <h3 id="ctgyLab">全部</h3>
+                <div class="ctgyGroup">
+                    <button id="showCtgyBtn">
+                        <span style="white-space: pre-wrap;" title="展开文章分类">   </span>
+                        <span id="scbTextf">↓</span>
+                        <span id="scbTextt">↑</span>
+                    </button>
+                    <div class="ctgyBtns">
+                        <button id="allBtn">全部</button>
+                        <button id="musicBtn">音乐</button>
+                        <button id="funnyBtn">搞笑</button>
+                        <button id="progmBtn">编程</button>
+                        <button id="anyBtn">其它</button>
+                    </div>
+                </div>
+            </div>
+            <div class="mAtc"></div>
+        </article>
+    </main>
+    <main class="downMain">
+        <aside class="placeDM">
+            <h2>意见箱</h2>
+            <textarea id="mailBox" placeholder="在此处输入意见..."></textarea>
+            <button id="saveBtn">发送</button>
+        </aside>
+        <div class="lately" id="lately">
+            <div class="latelyM">
+                <h2 id="latelyLab">最近更新 —— 展示最近5次更新 —— -</h2>
+                <ul>
+                    <li><span class="firstUpdt">2026/7/15 —— 全局美化与文章：HTML字体</span></li>
+                    <li><span class="secondUpdt">2026/7/14 —— 删除了日历、便笺、小游戏与掷骰子</span></li>
+                    <li><span class="thirdUpdt">2026/7/13 —— 新增日历</span></li>
+                    <li>2026/7/12 —— 字体使用Google Fonts</li>
+                    <li>2026/7/12 —— 优化了响应式布局</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <a id="home" tabindex="0">↑返回顶部</a>
+    <footer>
+        <p id="contact">&copy; 2026, Tomorrow's blog</p>
+        <p>感谢DeepSeek、豆包、GitHub Copilot的传教</p>
+        <p>最近更新的背景图来源于<a href="https://picsum.photos" target="_blank">Lorem Picsum</a></p>
+        <div id="contact">
+            <img class="Bzhan ptr" tabindex="0" src="./Bilibili_tv_a.svg" onclick="window.open('https://space.bilibili.com/3632299675487007?spm_id_from=333.1007.0.0')" alt="B站主页" title="B站主页 | 点赞！关注！投币！">
+            <img class="githb ptr" tabindex="0" src="./github.svg" onclick="window.open('https://github.com/Tomorrow345')" alt="GitHub主页" title="GitHub主页">
+            <img class="cde ptr" tabindex="0" src="./code.svg" onclick="window.open('https://github.com/Tomorrow345/blog')" alt="在GitHub查看网站" title="在GitHub查看网站 | 给个Star！">
+            <span>邮件：Riyueri123@Outlook.com</span>
+        </div>
+    </footer>
+    <script src="./script.js"></script>
+</html>
