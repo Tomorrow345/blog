@@ -163,7 +163,7 @@ if (updtnd.textContent.length < updtrd.textContent.length) {
     updtrd.style.borderTopRightRadius = '0px'; 
 }
 
-const blogver = '20260507015.r'; 
+const blogver = '20260607018.r'; 
 const meta = document.querySelector('meta[name="version"]'); 
 const latelyLab = document.getElementById('latelyLab'); 
 
@@ -268,6 +268,7 @@ downArrow.onclick = () => {
 
 const saveBtn = document.getElementById('saveBtn'); 
 const mailBox = document.getElementById('mailBox'); 
+const sbText = document.getElementById('sbText'); 
 
 saveBtn.onclick = () => {
     fetch('/api/letters', {
@@ -283,4 +284,12 @@ saveBtn.onclick = () => {
     })
 
     mailBox.value = ''; 
+    saveBtn.disabled = true; 
+    sbText.classList.add('animate'); 
+    sbText.addEventListener('animationend', () => {
+        sbText.classList.remove('animate'); 
+    }, { once: true }); 
+    setTimeout(() => {
+        saveBtn.disabled = false; 
+    }, 3000); 
 }

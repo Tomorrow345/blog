@@ -3,7 +3,8 @@ body {
     flex-direction: column;
     background-color: rgb(25, 35, 43); 
     font-family: 'Roboto', 'Microsoft YaHei', Arial, sans-serif; 
-    min-height: 97.9vh
+    min-height: 97.9vh; 
+    overflow-x: hidden;
 }
 header {
     background-color: rgb(255, 255, 255, 0.3); 
@@ -451,21 +452,29 @@ button:hover {
     transform: scale(0.5)
 }
 .downMain {
-    display: grid; 
-    grid-template-columns: 328px 1fr;
-    margin-top: 20px; 
-    gap: 10px; 
+    display: grid;
+    grid-template-columns: 328px minmax(0, 1fr);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
+    overflow-x: hidden;
+    margin-top: 20px;
+    gap: 10px;
     border-radius: 8px;
 }
 .lately {
-    background-color: rgb(255, 255, 255, 0.5); 
-    border-radius: 8px; 
-    padding: 10px; 
-    background-image: url('https://picsum.photos/1500/300'); 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    grid-column: 2 / 2;
+    background-color: rgb(255, 255, 255, 0.5);
+    border-radius: 8px;
+    padding: 10px;
+    background-image: url('https://picsum.photos/1500/300');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-column: 2 / 3;
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
 }
 .latelyM {
     background-color: rgba(70, 70, 70, 0.5); 
@@ -611,14 +620,14 @@ footer a {
 }
 .placeDM #mailBox {
     width: 100%; 
-    height: 50px; 
+    height: 80px; 
     resize: none
 }
 .downArrow {
     display: flex; 
     cursor: pointer; 
     flex-direction: column; 
-    animation: floatArw 1.5s ease-in-out infinite; 
+    animation: floatArw 1.5s ease-out infinite; 
     margin-top: 20px; 
 }
 @keyframes floatArw {
@@ -630,6 +639,29 @@ footer a {
     margin: -7px; 
     background-color: transparent; 
 }
+#sbText {
+    display: inline-block
+}
+#sbText.animate {
+    animation: bounce 3s ease-out forwards; 
+}
+@keyframes bounce {
+    0% {
+        color: inherit; 
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(360deg); 
+        color: rgb(0, 166, 255)
+    }
+    99% {
+        color: rgb(0, 166, 255)
+    }
+    100% {
+        color: white; 
+        transform: rotate(360deg); 
+    }
+}
 
 @media (max-width: 786px) {
     .mMain {
@@ -639,13 +671,19 @@ footer a {
     .intro-func {
         width: 100%; 
         order: 1; 
-        height: 325px
+        height: auto
     }
     footer {
         order: 4
     }
     .downMain {
-        order: 3
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden; 
+        order: 3; 
     }
     .imgs {
         flex-direction: column;
@@ -671,10 +709,14 @@ footer a {
         grid-template-columns: 1fr;
     }
     .placeDM {
-        width: 720px
+        width: min(100%, 720px);
+        max-width: 100%;
+        box-sizing: border-box;
     }
     .lately {
-        grid-column: 1 / 1;
+        grid-column: 1 / -1;
+        width: 100%;
+        max-width: 100%;
     }
 }
 @media (max-width: 480px) {
@@ -685,7 +727,7 @@ footer a {
     .intro-func {
         width: 100%; 
         order: 1; 
-        height: 410px
+        height: auto
     }
     footer {
         order: 4
@@ -738,13 +780,19 @@ footer a {
         transform: translateY(0);
     }
     .downMain {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
     #home {
         bottom: 60px
     }
     .placeDM {
-        width: 270px
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
     .lately {
         grid-column: 1 / 1;
