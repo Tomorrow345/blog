@@ -461,7 +461,7 @@ button:hover {
     background-color: rgb(255, 255, 255, 0.5); 
     border-radius: 8px; 
     padding: 10px; 
-    background-image: url('https://picsum.photos/1500/300'); 
+    background-image: url(); 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -611,7 +611,7 @@ footer a {
 }
 .placeDM #mailBox {
     width: 100%; 
-    height: 100px; 
+    height: 50px; 
     resize: none
 }
 .downArrow {
@@ -672,6 +672,9 @@ footer a {
     }
     .placeDM {
         width: 720px
+    }
+    .lately {
+        grid-column: 1 / 1;
     }
 }
 @media (max-width: 480px) {
@@ -742,5 +745,8 @@ footer a {
     }
     .placeDM {
         width: 270px
+    }
+    .lately {
+        grid-column: 1 / 1;
     }
 }
