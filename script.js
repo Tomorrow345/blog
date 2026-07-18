@@ -1,3 +1,5 @@
+const { response } = require("express");
+
 const allBtn = document.getElementById('allBtn');
 const musicBtn = document.getElementById('musicBtn');
 const anyBtn = document.getElementById('anyBtn'); 
@@ -264,4 +266,21 @@ downArrow.onclick = () => {
             behavior: 'smooth'
         })
     }
+}
+
+const saveBtn = document.getElementById('saveBtn'); 
+const mailBox = document.getElementById('mailBox'); 
+
+saveBtn.onclick = () => {
+    fetch('/api/letters', {
+        method: 'POST', 
+        headers: {
+            'Content-Type': 'application/json', 
+        }, 
+        body: JSON.stringify({ content: mailBox.value }), 
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert(data.message); 
+    })
 }

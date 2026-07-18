@@ -1,0 +1,7 @@
+[build]
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/api/letters"
+  to = "/.netlify/functions/submit-feedback"
+  status = 200
