@@ -281,4 +281,6 @@ saveBtn.onclick = () => {
     .then(data => {
         alert(data.message); 
     })
+
+    mailBox.value = ''; 
 }
