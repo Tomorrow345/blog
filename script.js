@@ -55,6 +55,7 @@ const mainAtc = document.querySelector('.mAtc');
 
 articles.forEach(function(atc) {
     const newAtc = document.createElement('article'); 
+    newAtc.tabIndex = 0; 
     newAtc.className = 'fuAtc'; 
     const atcTitle = document.createElement('h2'); 
     atcTitle.textContent = atc.title; 
@@ -74,7 +75,6 @@ articles.forEach(function(atc) {
         a.textContent = atc.content; 
         a.style.fontSize = '1em'; 
         a.target = '_blank'; 
-        a.tabIndex = -1; 
         atcContent.appendChild(a); 
     } else {
         atcContent.textContent = atc.content; 
