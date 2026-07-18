@@ -1,5 +1,3 @@
-const { response } = require("express");
-
 const allBtn = document.getElementById('allBtn');
 const musicBtn = document.getElementById('musicBtn');
 const anyBtn = document.getElementById('anyBtn'); 
