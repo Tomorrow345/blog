@@ -85,6 +85,10 @@ a:hover {
     -webkit-background-clip: text; 
     background-clip: text; 
 }
+.hero span a {
+    font-size: 15px; 
+    color: blue
+}
 .intro-func {
     margin: -8px; 
     height: 410px; 
