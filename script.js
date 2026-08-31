@@ -3,13 +3,15 @@ const musicBtn = document.getElementById('musicBtn');
 const anyBtn = document.getElementById('anyBtn'); 
 const funnyBtn = document.getElementById('funnyBtn'); 
 const progmBtn = document.getElementById('progmBtn'); 
+const appBtn = document.getElementById('appBtn'); 
 function getArticleItems() { return document.querySelectorAll('.fuAtc'); }
 const ctgyLab = document.getElementById('ctgyLab'); 
 const categoryNames = {
     music: '音乐', 
     funny: '搞笑', 
     progm: '编程', 
-    any: '其它'
+    any: '其它', 
+    app: '应用', 
 }; 
 
 function showAllArticles() {
@@ -35,10 +37,13 @@ anyBtn.onclick = () => {
     filterArticles('any');
 };
 funnyBtn.onclick = () => {
-    filterArticles('funny')
+    filterArticles('funny'); 
 }
 progmBtn.onclick = () => {
-    filterArticles('progm')
+    filterArticles('progm'); 
+}
+appBtn.onclick = () => {
+    filterArticles('app'); 
 }
 
 const articles = [
@@ -50,6 +55,7 @@ const articles = [
     { title: '笑话合集', content: '以下的笑话都是我从网络上搜集的👇1. 从前有三个人在野外旅游被食人族抓了，食人族族长说放了你们可以，但你们要分别给我带来十个水果，于是三个人出发了，过了一会，第一个人拿了十个樱桃回来，第二个人拿了十个桃回来，食人族族长命令道，让他们把这十个水果全部塞进自己嘴里，第一个人使使劲勉强塞进去了，第二个人塞进去九个，塞第十个的时候扑哧以下笑了，就全都吐了，食人族族长问他笑什么呢，那个人说：“我看见第三个人拿了十个榴莲回来！”' , ctgy: 'funnycls', time: '2026/7/11', canview: true, atcLink: './jokes.html'}, 
     { title: 'JS中的随机数', content: '当你在做猜数字、掷骰子等一类网页时，都需要用js生成随机数，我们可以通过Math.random来实现，用let创建一个变量，Math.floor用来将数字转化为整数，如果没有结果可能会是：3.0451182108912738、6.923154507599182、3.5553578526501806……', ctgy: 'progmcls', time: '2026/7/13', canview: true, atcLink: './random-num.html' }, 
     { title: 'HTML字体', content: '想让网页的文字看起来不那么生硬，可以在css中使用font-family修改字体，需要自己寻找好看的字体，自己电脑有的其它电脑可能没有，就会变成默认的，可以尽量寻找更兼容的字体，如果浏览网页的电脑是清朝下来的，什么字体都没有', ctgy: 'progmcls', time: '2026/7/15', canview: true, atcLink: './htmlFont.html' }, 
+    { title: '应用-AudioChecker', content: '这是我本人开发的一个简单应用，比较简陋^v^', ctgy: 'appcls', time: '2026/8/31', canview: true, atcLink: './app-audiocheck.html' }, 
 ]; 
 const mainAtc = document.querySelector('.mAtc'); 
 
@@ -90,6 +96,8 @@ articles.forEach(function(atc) {
         li.textContent = '搞笑'
     } else if (li.id == 'progmcls') {
         li.textContent = '编程'
+    } else if (li.id == 'appcls') {
+        li.textContent = '应用'
     }
 
     const atcTime = document.createElement('h4'); 
